@@ -63,7 +63,16 @@ public class Ex3Driver {
    * @throws java.io.FileNotFoundException 
    */
   public static void writeMatrix(int[][] matrix, String filename) throws FileNotFoundException {
-    throw new UnsupportedOperationException();
+       //throw new UnsupportedOperationException();
+    File wfile = new File(filename);
+    PrintWriter write = new PrintWriter(wfile);
+    for (int[] row: matrix){
+        for(int item: row){
+            write.printf("%d", item);
+        }
+        write.printf("\n");
+    }
+    write.close();
   }
   /**
    * Read a matrix from a file
@@ -72,7 +81,25 @@ public class Ex3Driver {
    * @throws java.io.FileNotFoundException
    */
   public static int[][] readFile(String filename) throws FileNotFoundException {
-    throw new UnsupportedOperationException();
+    //throw new UnsupportedOperationException();
+    Scanner reader = new Scanner(new File(filename));
+    String row1 = reader.nextLine();
+    String [] row_column = row1.split(" ");
+    int row = Integer.parseInt(row_column[0]);
+    int column = Integer.parseInt(row_column[1]);
+    int[][] matrix = new int[row][column];
+    int count = 0;
+    while (reader.hasNextLine() && count <= row) {
+        String matrix_num = reader.nextLine();
+        String [] num = matrix_num.split(" ");
+        for(int i = 0; i < column; i++){
+            matrix[count][i] = Integer.parseInt(num[i]);
+        }
+        count++;
+    }
+    reader.close();
+    return matrix;
+    
     /*
     10. Open the input file and create a Scanner object to read its content
     20. Read two values (rows and columns) from the first line, if possible
@@ -89,6 +116,18 @@ public class Ex3Driver {
    * @return the resulting matrix
    */
   public static int[][] multiply(int[][] matrix1, int[][] matrix2) {
-    throw new UnsupportedOperationException();
+    //throw new UnsupportedOperationException();
+    int m = matrix1.length;
+    int o = matrix2[0].length;
+    int p = matrix2.length;
+    int[][] sum_array = new int[m][o];
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < o; j++){
+            for (int k = 0; k < p; k++){
+                sum_array[i][j] += matrix1[i][k] * matrix2[k][j];
+            }
+        }
+    }
+    return sum_array;
   }
 }
