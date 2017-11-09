@@ -6,5 +6,16 @@ package exercise5;
  * @author yasiro01
  */
 public class College {
-  
+    private String name;
+    private int rank;
+    
+    public College(String name, int rank){
+        this.name = name;
+        this.rank = rank;
+    }
+    
+    
+    public void setRank(int newRank){
+        rank = newRank;
+    }
 }

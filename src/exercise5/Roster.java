@@ -15,5 +15,6 @@ import java.util.regex.Pattern;
  * @author yasiro01
  */
 public class Roster {
+  private ArrayList<Student> Students;
   
 }
