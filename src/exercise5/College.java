@@ -14,6 +14,13 @@ public class College {
         this.rank = rank;
     }
     
+    public String getName(){
+        return name;
+    }
+    
+    public int getRank(){
+        return rank;
+    }
     
     public void setRank(int newRank){
         rank = newRank;

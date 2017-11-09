@@ -6,20 +6,30 @@ package exercise5;
  * @author yasiro01
  */
 public class Employee {
-private String firstname;
-private String lastname;
-private double salary;
-private boolean fullTime;
+    private String firstname;
+    private String lastname;
+    private double salary;
+    private boolean fullTime;
 
 
-public Employee(String firstname, String lastname, double salary, boolean fullTime){
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.salary = salary;
-    this.fullTime = fullTime;
-}
+    public Employee(String firstname, String lastname, double salary, boolean fullTime){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.salary = salary;
+        this.fullTime = fullTime;
+    }
 
-public double getSalary() {
+    public String getFirstName(){
+        return firstname;
+    }
+    public String getLastName(){
+        return lastname;
+    }
+    public boolean getFullTime(){
+        return fullTime;
+    }
+    public double getSalary() {
         return salary;
-}
+    }
+    
 }

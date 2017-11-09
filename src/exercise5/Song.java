@@ -39,4 +39,10 @@ public class Song {
     }
     return total;
 }
+  public String getTitle(){
+        return title;
+    }
+  public String getArtist(){
+        return artist;
+    }
 }

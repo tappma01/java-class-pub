@@ -16,10 +16,22 @@ public class Laptop {
       this.color = color;
   }
   
+  public String getManufacturer(){
+        return manufacturer;
+    }
+  
+  public double getPrice(){
+        return price;
+    }
+  
+  public String getColor(){
+        return color;
+    }
+  
   public void setPrice(double newPrice){
       price = newPrice;
   }
-  public void setPrice(String newColor){
+  public void setColor(String newColor){
       color = newColor;
   }
 }

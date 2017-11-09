@@ -13,5 +13,13 @@ public class Room {
         this.building = building;
         this.number = number;
     }
+    
+    public String getBuilding(){
+        return building;
+    }
+    
+    public int getNumber(){
+        return number;
+    }
 }
 

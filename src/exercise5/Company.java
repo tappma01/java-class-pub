@@ -14,6 +14,13 @@ public class Company {
         this.stockPrice = stockPrice;
     }
     
+    public String getName(){
+        return name;
+    }
+    
+    public double getStockPrice(){
+        return stockPrice;
+    }
     
     public void setStockPrice(double newStockPrice){
         stockPrice = newStockPrice;

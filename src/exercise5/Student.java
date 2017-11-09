@@ -23,4 +23,14 @@ public class Student {
     public void setMajor(String newMajor){
         major = newMajor;
     }
+    
+    public String getName(){
+        return name;
+    }
+    public String getMajor(){
+        return major;
+    }
+    public double getGpa(){
+        return gpa;
+    }
 }
