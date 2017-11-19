@@ -10,6 +10,20 @@ import java.util.ArrayList;
 public class DigitalMovie extends Movie {
   private String service;
 
+  public DigitalMovie(String service, String director, int releaseYear, long id, String title, int quantity) {
+      super(director, releaseYear, id, title, quantity);
+      this.service = service;
+  }
+  
+  @Override
+  public void checkIn(){
+      
+  }
+  
+  @Override
+  public void checkOut(){
+      
+  }
   /**
    * Get the value of service
    * @return the value of service
@@ -24,6 +38,11 @@ public class DigitalMovie extends Movie {
    */
   public void setService(String service) {
     this.service = service;
+  }
+  
+  @Override
+  public  String getInfo(){
+      return (title + " was released in " + releaseYear + " and directed by " + director);
   }
   
 }
