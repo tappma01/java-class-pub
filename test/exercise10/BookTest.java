@@ -84,8 +84,8 @@ public class BookTest {
   @Test
   public void testGetYear() {
     System.out.println("Book.getYear");
-    assertEquals(new Integer(2017), book1.getYear());
-    assertEquals(new Integer(2017), book2.getYear());
+    assertEquals(2017 , book1.getYear());
+    assertEquals(2017, book2.getYear());
   }
   
   /**
